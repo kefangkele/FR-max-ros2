@@ -1,12 +1,12 @@
 ### [English](README.md) | 中文
 
-# FR-max-ros
+# FR-max-ros2
 
 ## 1.环境确认：
       1.1、系统：
-            Ubuntu 16.04 / Ubuntu 18.04
-      1.2、ROS版本：
-            Kinetic / melodic
+            Ubuntu 22.04
+      1.2、ROS2版本：
+            Humble
 
 ## 2.CAN卡连接与设置
       2.1、底盘CAN卡连接：
@@ -34,21 +34,21 @@
       
 ![](https://github.com/leej-j/FR-max-ros/blob/main/images/candump_print.png?raw=true) 
 
-## 4.ROS程序运行
+## 4.ROS2程序运行
       4.1、文件结构：
       
 ![](https://github.com/leej-j/FR-max-ros/blob/main/images/doc_tree.png?raw=true) 
 
       4.2、编译工作空间：
-            在你的工作空间中打开终端/在终端中进入你的工作空间，让终端处于工作空间级，再执行指令：catkin build
+            在你的工作空间中打开终端/在终端中进入你的工作空间，让终端处于工作空间级目录，再执行指令：colcon build
       4.3、设置临时环境变量：
-            在要运行程序的终端中执行指令：source ~/你的工作空间(例：catkin_ws)/devel/setup.bash
-            或者让要运行程序的终端处于工作空间级，执行指令：source devel/setup.bash
+            在要运行程序的终端中执行指令：source ~/你的工作空间(例：catkin_ws)/install/setup.bash
+            或者让要运行程序的终端处于工作空间级，执行指令：source install/setup.bash
             
 ![](https://github.com/leej-j/FR-max-ros/blob/main/images/source.png?raw=true)
 
       4.4、运行：
-            在你刚才输入了临时环境变量的终端中执行指令：roslaunch yhs_can_control yhs_can_control.launch
+            在你刚才输入了临时环境变量的终端中执行指令：ros2 launch yhs_can_control yhs_can_control.launch.py
       4.5、终端打印出的运行成功信息：
 
 ![](https://github.com/leej-j/FR-max-ros/blob/main/images/node_print.png?raw=true)  

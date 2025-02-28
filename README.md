@@ -10,11 +10,12 @@
             Humble
 
 ## 2.Computer and Industrial PC Boot Configuration
-#####      2.1.1. rc.local File Verification and Setup
-    Check if the rc.local file exists in the /etc/ directory:
-#####      2.1.2. If not present, execute:
+####      2.1. ensure rc.local file:
+    2.1.1. rc.local File Verification and Setup
+        Check if the rc.local file exists in the /etc/ directory:
+    2.1.2. If not present, execute:
                  sudo cp rc.local /etc  
-#####      2.1.3. If present, insert the following content above the exit 0 line in the rc.local file, then save:
+    2.1.3. If present, insert the following content above the exit 0 line in the rc.local file, then save:
                  sleep 2  
                  sudo ip link set can0 type can bitrate 500000  
                  sudo ip link set can0 up        

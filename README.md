@@ -79,7 +79,7 @@
 
 ## 6. Motion Test:
 ####      6.1. Before testing, it is recommended to lift the chassis or send a minimal speed command to the chassis (e.g., 0.03).
-####      6.2. Open a new terminal, navigate to your workspace directory (e.g., catkin_ws), and execute:
+####      6.2. Open a new terminal, navigate to your workspace directory (e.g., 5.1-ros2_ws), and execute:
             source install/setup.bash
     OR (without entering the workspace directory):
             source ~/your workspace (example: 5.1-ros2_ws)/install/setup.bash

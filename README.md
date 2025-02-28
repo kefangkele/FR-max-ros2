@@ -65,7 +65,7 @@
             
 ####      5.3.Setting temporary environment variables:
     Execute the command in the terminal where you want to run the program:  
-            source ~/your workspace (example: catkin_ws)/install/setup.bash  
+            source ~/your workspace (example: 5.1-ros2_ws)/install/setup.bash  
     Or, to keep the terminal where you want to run the program at the workspace level, execute the command:    
             source install/setup.bash  
 
@@ -82,12 +82,12 @@
 ####      6.2. Open a new terminal, navigate to your workspace directory (e.g., catkin_ws), and execute:
             source install/setup.bash
     OR (without entering the workspace directory):
-            source ~/your workspace (e.g. catkin_ws)/install/setup.bash
+            source ~/your workspace (example: 5.1-ros2_ws)/install/setup.bash
 ####      6.5. Send motion commands to control the chassis:
     6.5.1. Open a new terminal, navigate to your workspace directory, and set temporary environment variables:
             source install/setup.bash
     OR (without entering the workspace directory):
-            source ~/your workspace(e.g. catkin_ws)/install/setup.bash
+            source ~/your workspace(example: 5.1-ros2_ws)/install/setup.bash
     6.5.2. In a terminal with temporary environment variables configured, execute the rqt_publisher tool and ensure the remote controller is switched to command control mode.
             ros2 run rqt_publisher rqt_publisher
 ![](https://github.com/kefangkele/FR-max-ros2/blob/main/images/rqt_tool.png?raw=true)  

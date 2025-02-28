@@ -61,7 +61,7 @@
             colcon build
 ####      5.3、设置临时环境变量：
             在要运行程序的终端中执行指令：
-            source ~/你的工作空间(例：catkin_ws)/install/setup.bash
+            source ~/你的工作空间(例：5.1-ros2_ws)/install/setup.bash
             
             或者让要运行程序的终端处于工作空间级，执行指令：
             source install/setup.bash
@@ -82,12 +82,12 @@
 ####       6.2、打开新的终端，进入你的工作空间目录(例：catkin_ws)，执行指令
                         source install/setup.bash
                    或者不进人工作空间目录，执行指令
-                        source ~/你的工作空间(例：catkin_ws)/install/setup.bash
+                        source ~/你的工作空间(例：5.1-ros2_ws)/install/setup.bash
 ####       6.3、下发指令控制底盘运动
               6.5.1、打开新的终端，进入你的工作空间目录，设置临时环境变量：
                         source install/setup.bash
                      或者不进人工作空间目录，执行指令
-                        source ~/你的工作空间名(例：catkin_ws)/install/setup.bash
+                        source ~/你的工作空间名(例：5.1-ros2_ws)/install/setup.bash
               6.5.2、在设置了临时环境变量的终端，使用rqt_publisher工具，遥控器要切换到指令控制模式
                         ros2 run rqt_publisher rqt_publisher
 ![](https://github.com/kefangkele/FR-max-ros2/blob/main/images/rqt_tool.png?raw=true)

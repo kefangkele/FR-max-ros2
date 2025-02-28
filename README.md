@@ -10,11 +10,11 @@
             Humble
 
 ## 2.Computer and Industrial PC Boot Configuration
-####      2.1.1. rc.local File Verification and Setup
-            Check if the rc.local file exists in the /etc/ directory:
-####      2.1.2. If not present, execute:
+#####      2.1.1. rc.local File Verification and Setup
+    Check if the rc.local file exists in the /etc/ directory:
+#####      2.1.2. If not present, execute:
                  sudo cp rc.local /etc  
-####      2.1.3. If present, insert the following content above the exit 0 line in the rc.local file, then save:
+#####      2.1.3. If present, insert the following content above the exit 0 line in the rc.local file, then save:
                  sleep 2  
                  sudo ip link set can0 type can bitrate 500000  
                  sudo ip link set can0 up        
@@ -64,9 +64,9 @@
             
 ####      5.3.Setting temporary environment variables:
     Execute the command in the terminal where you want to run the program:  
-            source ~/your workspace (example: catkin_ws)/devel/setup.bash  
+            source ~/your workspace (example: catkin_ws)/install/setup.bash  
     Or, to keep the terminal where you want to run the program at the workspace level, execute the command:    
-            source devel/setup.bash  
+            source install/setup.bash  
 
 ![](https://github.com/kefangkele/FR-max-ros/blob/main/images/source.png?raw=true)
 
@@ -79,19 +79,15 @@
 ## 6. Motion Test:
 ####      6.1. Before testing, it is recommended to lift the chassis or send a minimal speed command to the chassis (e.g., 0.03).
 ####      6.2. Open a new terminal, navigate to your workspace directory (e.g., catkin_ws), and execute:
-            source devel/setup.bash
-            OR (without entering the workspace directory):
-            source ~/catkin_ws/devel/setup.bash
-
-####      6.3. Monitor topic
-            rostopic echo /ctrl_fb
-
-####      6.4. After executing step 6.3, if you see continuously updating feedback data in the terminal, the ROS driver package is functioning properly.
+            source install/setup.bash
+    OR (without entering the workspace directory):
+            source ~/catkin_ws/install/setup.bash
 ####      6.5. Send motion commands to control the chassis:
-            6.5.1. Open a new terminal, navigate to your workspace directory, and set temporary environment variables:
-                        source devel/setup.bash
-                   OR (without entering the workspace directory):
-                        source ~/your workspace(catkin_ws)/devel/setup.bash
-            6.5.2. In a terminal with temporary environment variables configured, execute the rqt_publisher tool and ensure the remote controller is switched to command control mode.
+    6.5.1. Open a new terminal, navigate to your workspace directory, and set temporary environment variables:
+            source install/setup.bash
+    OR (without entering the workspace directory):
+            source ~/your workspace(catkin_ws)/install/setup.bash
+    6.5.2. In a terminal with temporary environment variables configured, execute the rqt_publisher tool and ensure the remote controller is switched to command control mode.
+            ros2 run rqt_publisher rqt_publisher
 ![](https://github.com/kefangkele/FR-max-ros2/blob/main/images/rqt_tool.png?raw=true)  
       

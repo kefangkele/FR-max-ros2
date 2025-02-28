@@ -1,6 +1,6 @@
 ### English | [中文](README(中文).md)
 
-# FR-max-ros
+# FR-max-ros2
 
 # 一、pre-positioning
 ## 1. Environment confirmation:
@@ -29,7 +29,7 @@
     Specifically, Chassis CAN-H is to be connected to CANH of the CAN card connector plug, while Chassis CAN-L is to be connected to CANL of the CAN card connector plug.
     The following diagram illustrates the recommended configuration:
             
-![](https://github.com/kefangkele/FR-max-ros/blob/main/images/CAN_Connection.png?raw=true)
+![](https://github.com/kefangkele/FR-max-ros2/blob/main/images/CAN_Connection.png?raw=true)
 
 ####      3.2. Computer and robot communication connection:
     Subsequent to the completion of the aforementioned connection, the USB end of the CAN card cable should be inserted directly into the computer's USB port, thereby establishing a connection between the CAN card and the computer. Upon completion of the connection, the PWR light will illuminate.
@@ -38,7 +38,7 @@
             lsusb
     If the output information displays content resembling that depicted in the following image, it can be deduced that CAN can be utilized without issue.
 
-![](https://github.com/kefangkele/FR-max-ros/blob/main/images/terminal_state.png?raw=true)
+![](https://github.com/kefangkele/FR-max-ros2/blob/main/images/terminal_state.png?raw=true)
 
 ####      3.4. Communication initiation:
     To initiate this process, it is necessary to open a new terminal and enter the following commands: 
@@ -52,12 +52,12 @@
             candump can0
 ####      4.3. Terminal print the information normally:
 
-![](https://github.com/kefangkele/FR-max-ros/blob/main/images/candump_print.png?raw=true)
+![](https://github.com/kefangkele/FR-max-ros2/blob/main/images/candump_print.png?raw=true)
 
 ## 5. ROS2 program operation
 ####      5.1. File structure:
 
-![](https://github.com/kefangkele/FR-max-ros/blob/main/images/doc_tree.png?raw=true)
+![](https://github.com/kefangkele/FR-max-ros2/blob/main/images/doc_tree.png?raw=true)
 
 ####      5.2.Compile workspace:  
     Open the terminal in your workspace/enter your workspace in the terminal, let the terminal be in the workspace level, then execute the command: 
@@ -69,13 +69,13 @@
     Or, to keep the terminal where you want to run the program at the workspace level, execute the command:    
             source install/setup.bash  
 
-![](https://github.com/kefangkele/FR-max-ros/blob/main/images/source.png?raw=true)
+![](https://github.com/kefangkele/FR-max-ros2/blob/main/images/source.png?raw=true)
 
 ####      5.4. Run:  
     Execute the following command, in the terminal where you have just entered the temporary environment variable. 
             ros2 launch yhs_can_control yhs_can_control.launch.py   
 ####      5.5. The terminal prints out a successful run message:  
-![](https://github.com/kefangkele/FR-max-ros/blob/main/images/node_print.png?raw=true)
+![](https://github.com/kefangkele/FR-max-ros2/blob/main/images/node_print.png?raw=true)
 
 ## 6. Motion Test:
 ####      6.1. Before testing, it is recommended to lift the chassis or send a minimal speed command to the chassis (e.g., 0.03).
